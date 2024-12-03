@@ -1,0 +1,87 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  width: 350px; /* Slightly smaller for better layout balance */
+  max-height: 450px;
+  margin: 10px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.product:hover {
+  background-color: #131921;
+  color: white;
+  transform: translateY(-5px); /* Add a hover lift effect */
+}
+
+.product img {
+  width: 100%;
+  height: 250px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+  border-radius: 5px; /* Slightly rounded corners for images */
+}
+
+.product:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.product-info {
+  text-align: center;
+}
+
+.product-info h4 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.product-price {
+  font-size: 16px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.product-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.product-rating img {
+  width: 20px; /* Adjust star size */
+  height: 20px;
+}
+
+.product > button {
+  margin-top: 10px;
+  background-color: #cd9042;
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  cursor: pointer;
+  width: 150px;
+  height: 35px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.product > button:hover {
+  background-color: #b08842; /* Slightly darker on hover */
+}
+
+.product > button:active {
+  transform: scale(0.9); /* Slight shrink on click */
+}
+.product-rating .product-img{
+  width: 50px;
+  height: 50px;
+}

@@ -11,6 +11,11 @@ export const initailState = {
             return {
                 ...state, user : action.user
             }
+        case actionTy.ADD_TO_BASKET : 
+            return {
+                ...state,
+                basket : [...state.basket, action.item  ]
+            }
             default :
                 return state;
     }

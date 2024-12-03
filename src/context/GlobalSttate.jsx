@@ -21,4 +21,4 @@ function ContextProvider({children}) {
 export default ContextProvider
 
 
-export const AuthState = () => useContext(GlobalContext)
+export const useAuth = () => useContext(GlobalContext)
