@@ -1,4 +1,10 @@
 import * as actionTy  from "./ActionType"
+export const getBasketTotal = (basket) => {
+    return basket.reduce((firstprice, item) => {
+        return firstprice + item.price
+    },0)
+} 
+
 export const initailState = {
     basket : [],
     user : null
@@ -15,6 +21,11 @@ export const initailState = {
             return {
                 ...state,
                 basket : [...state.basket, action.item  ]
+            }
+        case actionTy.REMOVE_FROM_BASKET : 
+            return {
+                ...state,
+                basket : state.basket.filter(item => item.id !== action.id )
             }
             default :
                 return state;

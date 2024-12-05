@@ -1,7 +1,16 @@
 import React from 'react'
 import "./CheckoutProduct.css"
 import starIcon from "../../../../assets/images/star.png"
+import { useAuth } from '@/context/GlobalSttate'
+import * as actionTy  from "../../../../context/ActionType"
 function CheckoutProduct({ id, title, image, price, rating }) {
+  const {dispatch} = useAuth()
+  const RemoveProductDromBasket = () => {
+    dispatch({
+      type : actionTy.REMOVE_FROM_BASKET,
+      id : id
+    })
+  }
   return (
     <div className='checkoutProduct'>
       <img src={image} className='checkoutProduct-image' alt="" />
@@ -20,7 +29,7 @@ function CheckoutProduct({ id, title, image, price, rating }) {
             ))
           }
         </div>
-        <button>Remove From Basket</button>
+        <button onClick={RemoveProductDromBasket}>Remove From Basket</button>
       </div>
     </div>
   )
