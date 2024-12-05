@@ -34,7 +34,7 @@ function HomePage() {
           <Product
             image={foot}
             rating={3}
-            title="This product is a Footwear"
+            title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"
             price={60}
             id={shortid.generate()}
           />

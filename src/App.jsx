@@ -6,6 +6,7 @@ import { useAuth } from './context/GlobalSttate'
 import * as actions from './context/ActionType' 
 import { auth } from './firebase'
 import HomePage from './components/pages/Home/HomePage'
+import CheckoutPag from './components/pages/CheckOutPage/CheckoutPag'
 function App() {
   const {dispatch} = useAuth()
 
@@ -32,6 +33,10 @@ function App() {
           <HomePage />
         </>} />
         <Route path='/login' element={<LoginPage />} />
+        <Route path='/checkout' element={<>
+          <Header />
+          <CheckoutPag />
+        </>} />
       </Routes>
     </div>
   )
